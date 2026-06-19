@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brain7balker.github.io/officialcn-leyu-com-cn-4/sitemap.xml
