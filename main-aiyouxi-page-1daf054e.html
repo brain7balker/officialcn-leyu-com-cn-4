@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>爱游戏 · 资料索引与场景导览</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5faf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1d2b2a;
+      line-height: 1.6;
+      padding: 0 1rem 3rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* ---- 顶部导航 ---- */
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1.25rem 0 0.75rem;
+      border-bottom: 1px solid #cbe6e2;
+    }
+
+    .site-header .brand {
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.02em;
+      color: #0b5f5a;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      color: #266b65;
+      font-size: 0.95rem;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .site-nav a:hover {
+      border-bottom-color: #3ba397;
+      color: #144d48;
+    }
+
+    /* ---- hero / 资料引子 ---- */
+    .hero-intro {
+      margin: 2.2rem 0 2.5rem;
+      background: linear-gradient(135deg, #e7f5f2 0%, #d6eee9 100%);
+      border-radius: 28px;
+      padding: 2rem 2rem 2.2rem;
+      box-shadow: 0 4px 12px rgba(44, 130, 118, 0.06);
+    }
+
+    .hero-intro h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: #0b4f4a;
+      letter-spacing: 0.01em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-intro p {
+      max-width: 780px;
+      font-size: 1.05rem;
+      color: #1e403c;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-intro .tagline {
+      display: inline-block;
+      background: #b9ddd6;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #0b423e;
+      margin-top: 0.6rem;
+    }
+
+    /* ---- 网格卡片（三个场景模块） ---- */
+    .scenes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.6rem;
+      margin: 2.2rem 0 2.8rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.6rem 1.4rem 1.8rem;
+      box-shadow: 0 4px 14px rgba(0, 30, 28, 0.04), 0 0 0 1px #d7ebe7 inset;
+      transition: box-shadow 0.25s, transform 0.15s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 8px 24px rgba(33, 112, 102, 0.08), 0 0 0 1px #a5d4cb inset;
+      transform: translateY(-2px);
+    }
+
+    .scene-card h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #105a52;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .scene-card h3::before {
+      content: "▹";
+      color: #2e9589;
+      font-size: 1.2rem;
+    }
+
+    .scene-card p {
+      font-size: 0.95rem;
+      color: #2f4d49;
+      margin-bottom: 0.5rem;
+    }
+
+    .scene-card .meta-tip {
+      display: block;
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      background: #f0faf7;
+      padding: 0.4rem 0.9rem;
+      border-radius: 30px;
+      color: #1e6d64;
+    }
+
+    /* ---- 常见说明（FAQ 摘要） ---- */
+    .faq-summary {
+      background: #f0f9f6;
+      border-radius: 28px;
+      padding: 1.8rem 2rem 2rem;
+      margin: 2rem 0 2.5rem;
+      border: 1px solid #c3e0da;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #0b4f4a;
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: inline-block;
+      color: #175e55;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #2b4844;
+      margin-left: 0.2rem;
+    }
+
+    /* ---- 附加提示 / 资料索引 ---- */
+    .info-note {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      margin: 1.2rem 0 2rem;
+      border-left: 5px solid #3ba397;
+      box-shadow: 0 2px 10px rgba(44, 100, 92, 0.04);
+    }
+
+    .info-note p {
+      font-size: 0.98rem;
+      color: #1b3d39;
+    }
+
+    .info-note a {
+      color: #0d6b60;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: #9aced0;
+      font-weight: 500;
+    }
+
+    .info-note a:hover {
+      color: #06453e;
+      text-decoration-color: #3ba397;
+    }
+
+    /* ---- 底部 ---- */
+    .footer-meta {
+      margin-top: 3rem;
+      border-top: 1px solid #d1e7e3;
+      padding-top: 1.8rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #4a6f6a;
+    }
+
+    .footer-meta a {
+      color: #0b5f5a;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ---- 响应式精细调整 ---- */
+    @media (max-width: 640px) {
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .site-nav {
+        gap: 0.4rem 1rem;
+      }
+
+      .hero-intro {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .hero-intro h1 {
+        font-size: 1.6rem;
+      }
+
+      .scenes-grid {
+        gap: 1.2rem;
+      }
+
+      .faq-summary {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .hero-intro {
+        padding: 2.6rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <span class="brand">📋 资料索引</span>
+    <nav class="site-nav">
+      <a href="#intro">引子</a>
+      <a href="#scenes">场景</a>
+      <a href="#faq">说明</a>
+      <a href="#note">整理方向</a>
+    </nav>
+  </header>
+
+  <!-- hero / 资料引子 -->
+  <section class="hero-intro" id="intro">
+    <h1>围绕「爱游戏」的信息整理</h1>
+    <p>这个页面试着从资料梳理与场景归类的角度，呈现关于 <a href="https://main--aiyouxi.com" style="color:#0b5f5a; text-decoration:underline; text-underline-offset:2px;">爱游戏</a> 的简要介绍。不堆砌修饰，只把相关的线索、功能模块和常见疑问罗列清楚，方便你快速建立印象。</p>
+    <p>下面的三个场景卡片分别对应日常使用中比较典型的环节，每个卡片都附了一条小提示，帮助你理解背后的资料逻辑。</p>
+    <span class="tagline">📂 信息索引 · 轻量导览</span>
+  </section>
+
+  <!-- 三个场景模块 -->
+  <section id="scenes">
+    <div class="scenes-grid">
+      <div class="scene-card">
+        <h3>内容浏览与发现</h3>
+        <p>在 <a href="https://main--aiyouxi.com" style="color:#0d6b60; text-decoration:underline; text-underline-offset:2px;">爱游戏</a> 的导航结构中，内容通常按类别和热度两种维度组织。你可以通过标签筛选或关键词查找来缩小范围，减少无关信息的干扰。</p>
+        <span class="meta-tip">💡 索引思路：分类 + 热度排序</span>
+      </div>
+
+      <div class="scene-card">
+        <h3>信息归档与回顾</h3>
+        <p>对于已经阅读或收藏的内容，平台提供了基础的归档能力。合理的标签归档能让后续查找更省力，尤其适合长期关注某一方向的人。</p>
+        <span class="meta-tip">📌 资料提示：善用自定义标签</span>
+      </div>
+
+      <div class="scene-card">
+        <h3>互动与轻社交</h3>
+        <p>评论、点赞和分享构成了最基础的互动层。浏览时留意内容下方的互动区，有时能发现其他用户补充的有价值信息或不同视角。</p>
+        <span class="meta-tip">🤝 场景补充：关注高互动内容</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见说明 FAQ 摘要 -->
+  <section class="faq-summary" id="faq">
+    <h2>📖 常见说明 · 摘要</h2>
+    <div class="faq-item">
+      <strong>Q：如何快速找到某一类内容？</strong>
+      <p>建议先使用导航栏的分类入口，或直接在站内搜索关键词。部分内容会带有「精选」或「推荐」标识，可作为初步参考。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：资料是否会定期更新？</strong>
+      <p>内容更新频率因板块而异，热门主题通常更新更快。你可以把感兴趣的内容加入收藏夹，方便回看变化。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：是否有针对新用户的整理说明？</strong>
+      <p>在 <a href="https://main--aiyouxi.com" style="color:#0d6b60; text-decoration:underline; text-underline-offset:2px;">爱游戏</a> 的首页和部分栏目中，能发现引导类提示。建议先花几分钟浏览首页的模块划分，对整体结构有个大致印象。</p>
+    </div>
+  </section>
+
+  <!-- 附加提示：整理方向 -->
+  <div class="info-note" id="note">
+    <p><strong>🗂️ 资料整理的方向</strong> — 本介绍页从三个侧面（发现、归档、互动）来拆解日常使用流程，每个侧面都对应一种索引需求。如果你希望更系统地了解 <a href="https://main--aiyouxi.com">爱游戏</a>，不妨沿着这三个方向分别尝试，再结合自己的使用习惯补充标记。信息整理本身是一个逐渐精细的过程，不需要一次做完。</p>
+  </div>
+
+  <!-- 底部 -->
+  <footer class="footer-meta">
+    <p>基于资料索引与场景导览 · 页面内容由公开信息整理而成</p>
+    <p style="margin-top:0.4rem;">关于 <a href="https://main--aiyouxi.com">爱游戏</a> 的更多介绍，可参阅对应页面说明</p>
+  </footer>
+
+</div>
+</body>
+</html>
