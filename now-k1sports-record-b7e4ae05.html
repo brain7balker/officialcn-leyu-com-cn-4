@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K1体育 · 杂志</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f9f8f6;
+            font-family: "Georgia", "Noto Serif SC", "Times New Roman", serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+        /* hero 区域 */
+        .hero {
+            padding: 100px 0 40px 0;
+            border-bottom: 1px solid #e6e2db;
+            margin-bottom: 50px;
+        }
+        .hero .label {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #a08f7b;
+            margin-bottom: 24px;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 18px;
+        }
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #5b5349;
+            max-width: 540px;
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+        .hero .sub em {
+            font-style: italic;
+            color: #3d352b;
+        }
+        /* 主内容卡片式段落 */
+        .feature-card {
+            margin-bottom: 48px;
+        }
+        .feature-card h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            border-bottom: 1px solid #ddd8d0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+            color: #2b2621;
+        }
+        .feature-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            word-break: break-word;
+        }
+        .feature-card p:last-child {
+            margin-bottom: 0;
+        }
+        .feature-card .inset-quote {
+            font-style: italic;
+            color: #6b6054;
+            padding-left: 20px;
+            border-left: 3px solid #cbbeb0;
+            margin: 24px 0 20px 0;
+            font-size: 0.98rem;
+        }
+        /* 分隔引用块 */
+        .divider-note {
+            text-align: center;
+            padding: 18px 0 10px 0;
+            font-size: 0.9rem;
+            color: #978b7b;
+            letter-spacing: 1px;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+        }
+        .divider-note span {
+            background: #f9f8f6;
+            padding: 0 15px;
+        }
+        /* 页尾 */
+        .footer-zone {
+            margin-top: 64px;
+            padding: 36px 0 56px 0;
+            border-top: 1px solid #e0dad2;
+            text-align: center;
+        }
+        .footer-zone .remark {
+            font-size: 0.95rem;
+            color: #4c443b;
+            max-width: 480px;
+            margin: 0 auto 16px auto;
+            line-height: 1.6;
+        }
+        .footer-zone .remark a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid #b0a79b;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .footer-zone .remark a:hover {
+            border-bottom-color: #1e1e1e;
+            color: #000;
+        }
+        .footer-zone .small-note {
+            font-size: 0.8rem;
+            color: #a79b8c;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: 0.5px;
+        }
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 20px;
+            }
+            .hero {
+                padding-top: 64px;
+                padding-bottom: 30px;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+            .feature-card h2 {
+                font-size: 1.35rem;
+            }
+            .feature-card p {
+                font-size: 0.97rem;
+            }
+            .footer-zone .remark {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 440px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- hero 区域 -->
+        <div class="hero">
+            <div class="label">专题 · 运动现场</div>
+            <h1>K1体育<br>竞技的质地</h1>
+            <div class="sub">
+                一种关于节奏、策略与身体极限的观察。<br>
+                不止于赛事，更是<em>日常的延长线</em>。
+            </div>
+        </div>
+
+        <!-- 三段自然介绍 + 背景 -->
+        <div class="feature-card">
+            <h2>从身体出发</h2>
+            <p>
+                很多人最初接触格斗与综合体育，只是出于好奇。后来才发现，真正让人沉浸的并不是胜负本身，而是那种在有限规则下寻找无限可能的张力。<strong>K1体育</strong>所涵盖的内容，恰好提供了这样一种视角：它不鼓吹暴力，而是把力量、技术、意志放在同一个平面上，让人看到竞技背后缜密的逻辑。站立与地面，防守与反击，每一个细节都像是被反复推敲过的叙事。
+            </p>
+            <p>
+                这种观察一旦开始，就很难停下来。你开始留意步法的移动、出拳的时机，甚至运动员在回合间调整呼吸的方式——竞技变成了一种可以阅读的语言，而规则就是它的语法。
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h2>场景里的秩序</h2>
+            <p>
+                无论是训练馆里的沙袋声，还是赛事现场被灯光切割出的擂台，这些场景都有一种独特的秩序感。在这样一个空间里，专注变成最自然的状态。<a href="https://now-k1sports.com">K1体育</a>的背后，是一套完整的竞技文化体系：从体能训练到战术安排，从裁判手势到观众礼仪，每个环节都有自己的节奏。
+            </p>
+            <div class="inset-quote">
+                “擂台上的三分钟，可能是几个月准备的浓缩。”
+            </div>
+            <p>
+                这种秩序也延伸到了观看方式上。很多人逐渐养成固定的习惯：周五晚上打开屏幕，整理好桌面，调暗灯光，然后安静地看完一整晚的比赛。没有太多喧哗，更像是一种仪式——在快节奏的生活里，为自己保留一段专注的时间。
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h2>日常的映射</h2>
+            <p>
+                竞技体育的魅力，往往不在于那些高光时刻，而在于日常中的重复与修正。一个组合拳的打磨，一次防摔的预判，甚至只是体能的分配策略——这些东西和我们的生活并没有本质区别。工作、学习、创作，哪一样不需要反复调整、耐心积累？
+            </p>
+            <p>
+                所以很多人说，看比赛其实是在看一种理想化的坚持。你不需要亲自走上擂台，但可以从中学到关于节奏、耐心和取舍的东西。<strong>K1体育</strong>所代表的，不仅是赛事本身，更是一种可以被内化的思维方式——用清晰的逻辑面对不确定性，用冷静的判断代替慌乱。
+            </p>
+        </div>
+
+        <div class="divider-note">
+            <span>✦ ✦ ✦</span>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-zone">
+            <div class="remark">
+                如果你想进一步了解这个领域，可以看看 <a href="https://now-k1sports.com">K1体育</a> 上的内容。那里汇集了赛事分析、选手故事以及训练相关的讨论，基调冷静，信息密度适中。
+            </div>
+            <div class="small-note">
+                没有夸张的口号，只有持续的叙述。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
